@@ -12,24 +12,28 @@
 			href: "/counter"
 		},
 		{
-			label: "Temperature Converter",
-			href: "/temperature-converter"
+			label: "Temp Converter",
+			href: "/temp-converter"
 		},
 		{
 			label: "Flight Booking",
 			href: "/flight-booking"
+		},
+		{
+			label: "Timer",
+			href: "/timer"
 		}
 	]
 </script>
 
-<nav>
+<aside>
 	{#each links as { label, href }}
 		<a {href} class={`${$page.url.pathname == href && "text-orange-600"}`}>{label}</a>
 	{/each}
-</nav>
+</aside>
 
 <style>
-	nav {
+	aside {
 		@apply flex flex-col w-80 border-r border-zinc-200;
 
 		a {

@@ -1,12 +1,12 @@
 <script lang="ts">
-	import Navbar from "../components/navbar.svelte"
+	import Sidebar from "../components/sidebar.svelte"
 	import "../app.css"
 
 	let { children } = $props()
 </script>
 
 <main class="flex">
-	<Navbar />
+	<Sidebar />
 	<div class="grid place-content-center h-screen w-screen">
 		{@render children()}
 	</div>

@@ -1,29 +1,33 @@
 <script lang="ts">
 	class Temperature {
-		#c = $state(0);
-		#f = $state(0);
+		#c = $state(0)
+		#f = $state(0)
 
 		get c() {
-			return this.#c;
+			return this.#c
 		}
 
 		set c(temperature) {
-			this.#c = temperature;
-			this.#f = temperature * (9 / 5) + 32;
+			this.#c = temperature
+			this.#f = temperature * (9 / 5) + 32
 		}
 
 		get f() {
-			return this.#f;
+			return this.#f
 		}
 
 		set f(temperature) {
-			this.#f = temperature;
-			this.c = (temperature - 32) * (5 / 9);
+			this.#f = temperature
+			this.c = (temperature - 32) * (5 / 9)
 		}
 	}
 
-	const temperature = new Temperature();
+	const temperature = new Temperature()
 </script>
+
+<svelte:head>
+	<title>Temp Converter</title>
+</svelte:head>
 
 <div class="space-x-5">
 	<input type="number" bind:value={temperature.c} />

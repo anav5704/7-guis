@@ -1,6 +1,10 @@
 <script lang="ts">
-	let count = $state(0);
+	let count = $state(0)
 </script>
+
+<svelte:head>
+	<title>Counter</title>
+</svelte:head>
 
 <div class="space-x-5">
 	<button onclick={() => count--}>-</button>

@@ -9,6 +9,10 @@
 	}
 </script>
 
+<svelte:head>
+	<title>Flight Booking</title>
+</svelte:head>
+
 <form onsubmit={(e) => handleSubmit(e)} class="space-x-5">
 	<select bind:value={flight}>
 		<option value="One-way">One Way</option>
